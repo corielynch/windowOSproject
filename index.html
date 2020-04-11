@@ -6,19 +6,39 @@
     <title>Document</title>
 </head>
 <body>
+
     <h1>Open the Console</h1>    
     <script>
         console.log(window);
         console.log(window.navigator.platform);
-        console.log( window.navigator.userAgent);
-       
-        
         function getOS () {
+        var windowsOS = ["Win16", "Win32", "Win64"];
+        var macOS = ["MacIntel", "MacPPC", "Mac68K"];
+        for(var i = 0; i < windowsOS.length; i++) {
 
+          if (window.navigator.platform === windowsOS[i]) {
+            alert ("user is on windows");
+        }
 
+        
+          else {
+            alert ("not on Windows os");
         }
 
 
+        }
+        for(var j = 0; j < macOS.length; j++) {
+            if (window.navigator.platform === macOS[j]) {
+            alert ("user is mac OSX");
+            }
+            else {
+                alert ("not on Mac os");
+            }
+        }
+    }
+    getOS();
+
     </script>
+
 </body>
 </html>
