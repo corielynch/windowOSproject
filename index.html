@@ -7,13 +7,20 @@
 </head>
 <body>
 
-    <h1>Open the Console</h1>    
+<!--Header-->
+    <h1>Open the Console</h1>  
+  
+<!--Javascript code-->
     <script>
         console.log(window);
         console.log(window.navigator.platform);
         function getOS () {
+            
+//Declare variables//
         var windowsOS = ["Win16", "Win32", "Win64"];
         var macOS = ["MacIntel", "MacPPC", "Mac68K"];
+            
+//For loop with if/elsealerts for Windows users//
         for(var i = 0; i < windowsOS.length; i++) {
 
           if (window.navigator.platform === windowsOS[i]) {
@@ -27,6 +34,7 @@
 
 
         }
+//For loop with if/else alerts for Mac users//
         for(var j = 0; j < macOS.length; j++) {
             if (window.navigator.platform === macOS[j]) {
             alert ("user is mac OSX");
